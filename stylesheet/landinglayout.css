@@ -1,0 +1,69 @@
+/* add flex container with mobile first definitions */
+.flex-container{
+	display: flex;
+	flex-direction: row;
+    align-items: flex-start;
+	/* justify-content: space-between; */
+	width: 98vw;
+	height: 97vh;
+	/* background-color: black; */
+    /* gap: 8px; */
+}
+
+/* define what happens for non mobile devices */
+@media screen and (min-width:768px) {
+	.flex-container{
+	    flex-direction: column;
+        align-items: flex-start;
+        width: 100vw;
+	    height: 100vh;
+	    /* background-color: black; */
+        /* gap: 10px; */
+	}
+}
+
+/* define main body properties */
+body{
+    background-image: url("../images/BG.jpeg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    }
+
+/* define properties of main box */
+.b1{
+    /* z-index: -1;  */
+    background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    opacity: 0.3;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    line-height: 65vh;
+    font-size: 70px;  
+    border-radius: 8px;
+	/* //background-color:green; */
+	width:98%;
+	height:99%;
+    /* filter: drop-shadow(30px 10px 4px black); */  
+    
+}
+/* define what chnages when we move into main box */
+.b1:hover{
+    opacity: 0.5;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+}
+/* define the link properties  */
+a {
+    color:rgb(49, 183, 232);
+    text-decoration: none;
+  }
+/* define what happens when we hover over the link */
+a:hover {
+    color:rgb(255, 255, 255);
+  }
+
+
+
+

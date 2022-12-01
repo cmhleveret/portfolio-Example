@@ -1,0 +1,621 @@
+
+/* -------------------------------------------------------------------------- */
+/*                                  ANIMATION START                                 */
+/* -------------------------------------------------------------------------- */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+/* -------------------------------------------------------------------------- */
+/*                                  ANIMATION END                                 */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  BODY START                                */
+/* -------------------------------------------------------------------------- */
+body{
+    background-image: url("../images/cubejet.svg");
+    background-color: black;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}
+/* https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ */
+/* -------------------------------------------------------------------------- */
+/*                                  BODY END                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                  UTILITIES                                 */
+/* -------------------------------------------------------------------------- */
+* {
+    margin:5;
+    padding: 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: "Audiowide", sans-serif;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none; 
+}
+/* -------------------------------------------------------------------------- */
+/*                                UTILITUES END                               */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                  UPPER NAV START                                 */
+/* -------------------------------------------------------------------------- */
+.navbar {
+/* Text and nav properties */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #222831;
+    opacity: 0.85;
+    color: #77989a;
+    /* gap: 5px; */
+    top: 5px;
+    position: fixed;
+    width: 60%;
+    z-index: 100;
+}
+
+.nav-links a {
+    color: rgb(168, 167, 167);
+}
+
+/* LOGO */
+.logo {
+    /* font-size: 10px; */
+    width: 15%;
+    /* height: 20vw;
+    transform: rotate(90deg); */
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: #747b86;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+    position: relative; 
+}
+.dropdown {
+    background-color: #222831;
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 5px;
+    top: 35px;
+}
+.dropdown li + li {
+    margin-top: 10px;
+}
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover {
+    background-color: #747b86;
+}
+.services:hover .dropdown {
+    display: block;
+}
+
+.navbar:hover {
+    opacity: 1;
+}
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+/*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* -------------------------------------------------------------------------- */
+/*                                UPPER NAV END                               */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                               LOWER NAV START                              */
+/* -------------------------------------------------------------------------- */
+
+/* end of upper nav bar */
+/* start of lower nav bar */
+.navbar-lower {
+/* Text and nav properties */
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+    display: flex;
+    align-items: center;
+    margin-left: 81%;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    background-color: #222831;
+    opacity: 0.5;
+    color: #77989a;
+    /* gap: 5px; */
+    top: 91%;
+    position: fixed;
+    width: 18%;
+    z-index: 100;
+}
+
+.nav-links-lower a {
+    color: rgb(168, 167, 167);
+}
+/* LOGO */
+.logo-container {
+    display: flex;
+    flex-wrap: nowrap;
+	flex-direction: column;
+    align-items: center;
+	justify-content: space-evenly;
+    width: 15%;
+    top: 30%;
+    background-color: rgba(28, 20, 20, 0);
+    font-size: 30pt;
+    padding-top: 5px;
+    padding-bottom: 1px;
+   }
+
+   .logo-lower {
+    /* font-size: 10px; */
+    width: 40%;
+    height: auto;
+    /* height: 20vw;
+    transform: rotate(90deg); */
+   }
+
+   .logo-lower-twitter {
+    /* font-size: 10px; */
+    width: 80%;
+    
+    /* height: 20vw;
+    transform: rotate(90deg); */
+   }
+
+   .logo-lower-instagram {
+    /* font-size: 10px; */
+    width: 80%;
+   
+    /* height: 20vw;
+    transform: rotate(90deg); */
+   }
+
+   .logo-lower-email {
+    /* font-size: 10px; */
+    width: 90%;
+   
+    
+    /* height: 20vw;
+    transform: rotate(90deg); */
+   }
+
+   .logo-container:hover {
+    background-color: #747b86;
+   }
+   
+
+
+/* NAVBAR MENU */
+   .menu-lower {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu-lower li:hover {
+    background-color: #747b86;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu-lower li {
+    padding: 5px 14px;
+   }
+/* DROPDOWN MENU */
+   .services-lower {
+    position: relative; 
+   }
+
+   .dropdown-lower {
+    background-color: #222831;
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 5px;
+    top: 35px;
+   }
+   .dropdown-lower li + li {
+    margin-top: 10px;
+   }
+   .dropdown-lower li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown-lower li:hover {
+    background-color: #747b86;
+   }
+   .services-lower:hover .dropdown {
+    display: block;
+   }
+
+   .navbar-lower:hover {
+    /* Text and nav properties */
+        opacity: 0.9;
+    }
+
+    /* .logo-lower-email:hover {
+       color: #222831;
+    } */
+
+   /* .menu-lower:hover {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    opacity: 1;
+   } */
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+/*HAMBURGER MENU*/
+   .hamburger-lower {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+
+/* -------------------------------------------------------------------------- */
+/*                                LOWER NAV END                               */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                             MEDIA QUERIES START                            */
+/* -------------------------------------------------------------------------- */
+
+/* end of lower nav bar */
+/* content */
+.gallery {
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+    align-items: flex-start;
+	justify-content: center;
+    /* row-gap: 10px; */
+    /* column-gap: 0px; */
+    /* align-content: space-between; */
+    /* gap: 1vh; */
+	width: 100%;
+    height: auto;
+	/* height: 200vw; */
+    /* background-color: #4d4f53; */
+    /* offset below top nav bar */
+    margin-top: 9vh; 
+    /* moves gallery up or down */
+    opacity: 1;
+    z-index: -1;
+}
+
+.image-container {
+	text-align: center;
+	width: 25vw;
+    height: 25vw;
+    position: relative;
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+    font-size: 30pt;
+}
+
+.gallery-image {
+	border-radius: 6px;
+	/* border: solid 5px rgba(0, 0, 0, 0.25); */
+    border: solid 1px rgba(1, 1, 1, 0.5);
+	width: 23vw;
+    margin-top: 3%;
+	margin: 10;
+}
+
+.gallery-image:hover {
+    color: #77989a;
+	opacity: 0.5;
+}
+
+a {
+    color: rgba(255, 255, 255, 0);
+}
+
+a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#light a {
+    color: rgba(255, 255, 255, 0);
+}
+
+#light a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.image-container:hover {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Text on image  */
+.textone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+}
+
+.textone:hover {
+    color: rgb(0, 0, 0);
+    font-size: 50pt;
+}
+
+
+/* .textone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+}
+
+.textone:hover {
+    color: rgb(0, 0, 0);
+    font-size: 50pt;
+} */
+
+/* Text on image  */
+
+
+
+.pdf-container {
+	text-align: center;
+	width: 50vw;
+    position: relative;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30pt;
+}
+
+
+/* APPLYING MEDIA QUERIES */
+/* @media (max-width: 1600px) {
+    .gallery {
+      
+    }
+    
+    .image-container {
+       
+    }
+    
+    .gallery-image {
+   
+    }
+  
+} */
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 750px) {
+    .menu-lower { 
+     display:none;
+     position: absolute;
+     background-color:#747b86;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+    }
+    .menu-lower li:hover {
+     display: inline-block;
+     background-color:#747b86;
+     transition: 0.3s ease;
+    }
+    .menu-lower li + li {
+     margin-top: 12px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+     display: block;
+    }
+    .hamburger-lower {
+     display: block;
+    }
+    .dropdown-lower {
+     left: 50%;
+     top: 30px;
+     transform: translateX(35%);
+    }
+    .dropdown-lower li:hover {
+     background-color: #747b86;
+    }
+}
+
+@media (max-width: 950px) {
+    .menu { 
+        display:none;
+        position: absolute;
+        background-color:#747b86;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color:#747b86;
+        transition: 0.3s ease;
+    }
+
+    .menu li + li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background-color: #747b86;
+    }
+
+/* lower nav bar */
+    .menu-lower { 
+        display:none;
+        position: absolute;
+        background-color:#747b86;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu-lower li:hover {
+        display: inline-block;
+        background-color:#747b86;
+        transition: 0.3s ease;
+    }
+
+    .menu-lower li + li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked ~ .menu-lower{
+        display: block;
+    }
+
+    .hamburger-lower {
+        display: block;
+    }
+
+    .dropdown-lower {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown-lower li:hover {
+        background-color: #747b86;
+    }
+/* image containers */
+    .gallery {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 50%;
+    }
+
+    .navbar-lower {
+        
+        margin-left: 0%;
+        top: 93%;
+        position: fixed;
+        width: 40%;
+        z-index: 100;
+    }
+
+    .logo-lower {
+        width: 20%;
+        height: auto;
+       }
+
+    .textone:hover {
+        font-size: 25pt;
+    }
+}
+
+/* @media screen and (max-width: 650px) {
+	.image-container {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.image-container {
+		width: 100%;
+	}
+} */
+/* end of content */
+
+/* animated gif on hover */
+/* .static {
+    background-image: url("../images/marengo.jpg");
+    width: 33vw;
+    height: auto;
+    background-size: cover;
+  }
+  
+  .static:hover {
+    background-image: url("../gifs/sam.gif");
+    background-size: cover;
+  } */
+
+/* add java script tips and tricks for final website  */
+
+/* Jump to page points https://www.w3docs.com/snippets/html/how-to-create-an-anchor-link-to-jump-to-a-specific-part-of-a-page.html */
+
+/* open link in new tab -- target=" _blank" */
+
+/* VARIABLES */
+
+/* HOST FONT LOCALLY @font-face */
+
+/* scale images with scale: 1; */
+
+/* LOGO ON TAB - FAVICON */
+
+/* explore google fonts */
